@@ -12,11 +12,14 @@ public class Deal {
     String detail; // 거래내용
     boolean confirmed; // 승인여부
 
+    Certificate certificate; // 거래체결증서
+
     Deal(int amount, double exchangeRate, String currency, String dueTo, String detail) {
         System.out.println("\tDeal 생성됨");
         this.id = counter++;
         this.dealDate = new Date();
         this.confirmed = false;
+        this.certificate = null;
 
         // 파라미터
         this.amount = amount;
@@ -24,5 +27,16 @@ public class Deal {
         this.currency = currency;
         this.dueTo = dueTo;
         this.detail = detail;
+    }
+
+    public int getAmount() {
+        return this.amount;
+    }
+
+    public Certificate makeConfirmation(Settlements settlements) {
+        this.confirmed = true;
+        this.certificate = new Certificate(this, settlements);
+
+        return certificate;
     }
 }

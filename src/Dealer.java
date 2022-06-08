@@ -38,5 +38,7 @@ public class Dealer {
         return deal;
     }
 
-
+    public int getPositionLimits() {
+        return this.positionLimits;
+    }
 }
