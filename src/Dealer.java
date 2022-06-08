@@ -41,4 +41,9 @@ public class Dealer {
     public int getPositionLimits() {
         return this.positionLimits;
     }
+
+    public void makeAdjustment(int amount) {
+        this.positionLimits = amount;
+        System.out.println("Dealer의 position limits 조정 완료");
+    }
 }

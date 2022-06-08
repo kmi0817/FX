@@ -24,4 +24,8 @@ public class Settlements {
             return null;
         }
     }
+
+    public void adjustPositionLimits(Dealer aDealer, int amount) {
+        aDealer.makeAdjustment(amount);
+    }
 }
