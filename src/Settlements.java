@@ -25,12 +25,12 @@ public class Settlements {
         }
     }
 
-    public void adjustPositionLimits(Dealer aDealer, int amount) {
-        aDealer.makeAdjustment(amount);
+    public void adjustPositionLimits(Dealer dealer, int amount) {
+        dealer.makeAdjustment(amount);
     }
 
-    public BankPaper makeBankPaper(Deal aDeal, String bankName) {
-        BankPaper bankPaper = new BankPaper(aDeal, bankName);
+    public BankPaper makeBankPaper(Deal deal, String bankName) {
+        BankPaper bankPaper = new BankPaper(deal, bankName);
 
         return bankPaper;
     }
