@@ -13,6 +13,7 @@ public class Deal {
     boolean confirmed; // 승인여부
 
     Certificate certificate; // 거래체결증서
+    Accounts checkedBy; // 확인(검토) 여부
 
     Deal(int amount, double exchangeRate, String currency, String dueTo, String detail) {
         System.out.println("\tDeal 생성됨");
@@ -20,6 +21,7 @@ public class Deal {
         this.dealDate = new Date();
         this.confirmed = false;
         this.certificate = null;
+        this.checkedBy = null;
 
         // 파라미터
         this.amount = amount;
@@ -38,5 +40,22 @@ public class Deal {
         this.certificate = new Certificate(this, settlements);
 
         return certificate;
+    }
+
+    public void makeCheck(Accounts accounts) {
+        if (this.checkedBy == null) {
+            this.checkedBy = accounts;
+            System.out.println("거래 확인(검토) 완료");
+        } else {
+            System.out.println("거래 확인(검토) 불가: 이미 검토됨");
+        }
+    }
+
+    public boolean isChecked() {
+        if (this.checkedBy != null) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

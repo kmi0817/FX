@@ -30,8 +30,12 @@ public class Settlements {
     }
 
     public BankPaper makeBankPaper(Deal deal, String bankName) {
-        BankPaper bankPaper = new BankPaper(deal, bankName);
-
-        return bankPaper;
+        if (deal.isChecked()) {
+            BankPaper bankPaper = new BankPaper(deal, bankName);
+            return bankPaper;
+        } else {
+            System.out.println("은행 서류 생성 불가: Accounts의 확인(검토) 필요");
+            return null;
+        }
     }
 }

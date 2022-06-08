@@ -13,5 +13,12 @@ public class Main {
 
         // 은행 서류 생성
         BankPaper bankPaper = settlements.makeBankPaper(aDeal, "단국은행");
+
+        // 거래 확인(검토)
+        Accounts accounts = new Accounts();
+        accounts.checkDeal(aDeal);
+
+        bankPaper = settlements.makeBankPaper(aDeal, "단국은행");
+
     }
 }
