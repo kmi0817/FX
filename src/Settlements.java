@@ -28,4 +28,10 @@ public class Settlements {
     public void adjustPositionLimits(Dealer aDealer, int amount) {
         aDealer.makeAdjustment(amount);
     }
+
+    public BankPaper makeBankPaper(Deal aDeal, String bankName) {
+        BankPaper bankPaper = new BankPaper(aDeal, bankName);
+
+        return bankPaper;
+    }
 }

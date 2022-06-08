@@ -10,5 +10,8 @@ public class Main {
 
         // position limits 조정
         settlements.adjustPositionLimits(aDealer, 500);
+
+        // 은행 서류 생성
+        BankPaper bankPaper = settlements.makeBankPaper(aDeal, "단국은행");
     }
 }
