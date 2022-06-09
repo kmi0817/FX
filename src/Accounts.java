@@ -14,11 +14,11 @@ public class Accounts {
     }
 
     /* 은행 서류 생성 */
-    public BankPaper makeBankPaper(Deal deal) {
+    public BankPaper makeBankPaper(Deal deal, String bankName) {
         System.out.println("Accounts: makeBankPaper");
 
         if (deal.isConfirmed() != null && deal.isChecked() != null) {
-            BankPaper bankPaper = new BankPaper(deal);
+            BankPaper bankPaper = new BankPaper(deal, bankName, this);
             return bankPaper;
         } else {
             System.out.println("은행 서류 생성 불가: 승인이나 검토가 진행되지 않음");

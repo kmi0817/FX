@@ -16,7 +16,7 @@ public class Main {
 
         accounts.checkDeal(aDeal); // 거래 검토 완료
 
-        BankPaper aBankPaper = accounts.makeBankPaper(aDeal); // 은행 서류 생성
+        BankPaper aBankPaper = accounts.makeBankPaper(aDeal, "단국은행"); // 은행 서류 생성
 
         accounts.recordCertificate(aCertificate, "2022-06-09", "2022-07-01");
     }
