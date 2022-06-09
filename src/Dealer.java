@@ -13,8 +13,12 @@ public class Dealer {
     }
 
     /* 거래 등록 */
-    public void registerDeal(int amount, double exchangeRate, String currency, String detail) {
+    public Deal registerDeal(int amount, double exchangeRate, String currency, String dueTo, String detail) {
         System.out.println("Dealer: registerDeal");
+
+        Deal deal = new Deal(amount, exchangeRate, currency, dueTo, detail);
+        myDealList.add(deal);
+        return deal;
     }
 
     /* 거래 승인 */
