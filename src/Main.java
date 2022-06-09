@@ -7,10 +7,12 @@ public class Main {
         Settlements settlements = new Settlements();
         Accounts accounts = new Accounts();
 
-        Deal aDeal = aDealer.registerDeal(counterparty,350, 1.5, "USD", "2022-08-17", "None");
+        Deal aDeal = aDealer.registerDeal(counterparty,350, 1.5, "USD", "2022-08-17", "None"); // 거래 등록
         Certificate aCertificate = settlements.confirmDeal(aDeal); // 승인 불가
 
         settlements.adjustPositionLimits(aDealer, 400); // position limits 조정
         aCertificate = settlements.confirmDeal(aDeal); // 승인 완료
+
+        accounts.checkDeal(aDeal); // 거래 검토 완료
     }
 }

@@ -66,8 +66,11 @@ public class Deal {
         return this.settlements;
     }
 
-    public void makeCheck() {
+    public void makeCheck(Accounts accounts) {
         System.out.println("Deal: makeCheck");
+
+        this.accounts = accounts; // 검토자 설정
+        System.out.println("거래 검토 완료");
     }
 
     /* 은행 서류 생성 */
