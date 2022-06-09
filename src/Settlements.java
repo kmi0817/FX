@@ -23,7 +23,9 @@ public class Settlements {
     }
 
     /* position limits 조정 */
-    public void adjustPositionLimits(Dealer dealer) {
+    public void adjustPositionLimits(Dealer dealer, int positionLimits) {
         System.out.println("Settlements: adjustPositionLimits");
+
+        dealer.setPositionLimits(positionLimits);
     }
 }

@@ -29,5 +29,6 @@ public class Dealer {
     /* position limits 조정 */
     public void setPositionLimits(int positionLimits) {
         this.positionLimits = positionLimits;
+        System.out.println("Dealer: position limits 조정 완료");
     }
 }
