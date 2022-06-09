@@ -7,6 +7,6 @@ public class Main {
         Settlements settlements = new Settlements();
         Accounts accounts = new Accounts();
 
-        Deal aDeal = aDealer.registerDeal(300, 1.5, "USD", "2022-08-17", "None");
+        Deal aDeal = aDealer.registerDeal(counterparty,300, 1.5, "USD", "2022-08-17", "None");
     }
 }

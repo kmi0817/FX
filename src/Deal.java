@@ -3,7 +3,7 @@ import java.util.Date;
 public class Deal {
     private static int counter = 1; // 거래 id용 클래스 변수
 
-    private Deal dealer; // 등록자
+    private Dealer dealer; // 등록자
     private Counterparty counterparty; // 거래상대
     private Settlements settlements; // 승인자
     private Accounts accounts; // 검토자
@@ -18,9 +18,9 @@ public class Deal {
     private String dueTo; // 거래유효기간 ex) "2022-08-17"
     private String detail; // 거래내용
 
-    Deal(int amount, double exchangeRate, String currency, String dueTo, String detail) {
-        this.dealer = null;
-        this.counterparty = null;
+    Deal(Dealer dealer, Counterparty counterparty, int amount, double exchangeRate, String currency, String dueTo, String detail) {
+        this.dealer = dealer;
+        this.counterparty = counterparty;
         this.settlements = null;
         this.accounts = null;
         this.certificate = null;
