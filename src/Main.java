@@ -8,5 +8,6 @@ public class Main {
         Accounts accounts = new Accounts();
 
         Deal aDeal = aDealer.registerDeal(counterparty,300, 1.5, "USD", "2022-08-17", "None");
+        Certificate aCertificate = settlements.confirmDeal(aDeal);
     }
 }

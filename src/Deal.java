@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.Set;
 
 public class Deal {
     private static int counter = 1; // 거래 id용 클래스 변수
@@ -36,12 +37,24 @@ public class Deal {
     }
 
     /* 거래 승인 */
-    public void contactCounterparty() {
+    public boolean contactCounterparty() {
         System.out.println("Deal: contactCounterparty");
+
+        return this.counterparty.makeContact(this);
     }
 
-    public void makeConfirmation() {
+    public Certificate makeConfirmation(Settlements settlements) {
         System.out.println("Deal: makeConfirmation");
+
+        if (this.dealer.getPositionLimits() >= this.amount) {
+            this.settlements = settlements; // 승인자 설정
+            Certificate certificate = new Certificate(this, settlements); // 거래체결증서 생성
+            this.certificate = certificate; // 거래체결증서 설정
+            return certificate;
+        } else {
+            System.out.println("거래 승인 불가: 거래금액이 Dealer의 Position Limits 초과");
+            return null;
+        }
     }
 
     public int getAmount() {

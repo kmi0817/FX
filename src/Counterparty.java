@@ -9,7 +9,13 @@ public class Counterparty {
         this.contactInfo = contactInfo;
     }
 
-    public void makeContact() {
+    public boolean makeContact(Deal deal) {
         System.out.println("Counterparty: makeContact");
+
+        if (this.positionLimits >= deal.getAmount()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

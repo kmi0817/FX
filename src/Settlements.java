@@ -9,8 +9,17 @@ public class Settlements {
     }
 
     /* 거래 승인 */
-    public void confirmDeal(Deal deal) {
+    public Certificate confirmDeal(Deal deal) {
         System.out.println("Settlements: confirmDeal");
+
+        if (deal.contactCounterparty()) {
+            Certificate certificate = deal.makeConfirmation(this);
+            certificateList.add(certificate);
+            return certificate;
+        } else {
+            System.out.println("거래 승인 불가: Counterparty의 거래 취소");
+            return null;
+        }
     }
 
     /* position limits 조정 */
