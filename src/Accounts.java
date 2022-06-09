@@ -27,7 +27,10 @@ public class Accounts {
     }
 
     /* 은행 거래 기록 */
-    public void recordCertificate(Deal deal) {
+    public void recordCertificate(Certificate certificate, String bankDealDate, String billSettlementDate) {
         System.out.println("Accounts: recordCertificate");
+        
+        certificate.setBankDealDate(bankDealDate); // 은행거래일 설정
+        certificate.setBillSettlementDate(billSettlementDate); // 어음결제일 설정
     }
 }
