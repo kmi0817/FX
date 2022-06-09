@@ -19,6 +19,7 @@ public class Certificate {
         this.billSettlementDate = "";
     }
 
+    /* 거래체결증서 기록 */
     public void completeCertificate(Accounts account, String bankName, String bankDealDate, String billSettlementDate) {
         if (this.deal.isConfirmed() != null && deal.isChecked() != null) {
             this.accounts = account;

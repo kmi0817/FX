@@ -13,7 +13,7 @@ public class Accounts {
         }
     }
 
-    /* 은행 거래 기록 */
+    /* 거래체결증서 기록 */
     public void recordCertificate(Certificate certificate, String bankName, String bankDealDate, String billSettlementDate) {
 //        System.out.println("Accounts: recordCertificate");
 

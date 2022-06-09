@@ -16,10 +16,12 @@ public class Main {
         System.out.println(aDeal.toString()); // 거래 출력
         System.out.println(aCertificate.toString()); // 미완인 거래체결증서 출력
 
+        accounts.recordCertificate(aCertificate, "단국은행", "2022-06-09", "2022-07-01"); // 거래체결증서 기록 실패
+
         accounts.checkDeal(aDeal); // 거래 검토 완료
         System.out.println(aDeal.toString()); // 거래 출력
 
-        accounts.recordCertificate(aCertificate, "단국은행", "2022-06-09", "2022-07-01"); // 은행 거래 기록
+        accounts.recordCertificate(aCertificate, "단국은행", "2022-06-09", "2022-07-01"); // 거래체결증서 기록
         System.out.println(aCertificate.toString()); // 완성된 거래체결증서 출력
     }
 }
