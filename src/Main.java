@@ -12,13 +12,18 @@ public class Main {
         settlements.adjustPositionLimits(aDealer, 500);
 
         // 은행 서류 생성
-        BankPaper bankPaper = settlements.makeBankPaper(aDeal, "단국은행");
+//        BankPaper bankPaper = settlements.makeBankPaper(aDeal, "단국은행");
+
 
         // 거래 확인(검토)
         Accounts accounts = new Accounts();
+        BankPaper bankPaper = accounts.requestBankPaper(aDeal, settlements);
+
         accounts.checkDeal(aDeal);
 
-        bankPaper = settlements.makeBankPaper(aDeal, "단국은행");
+//        bankPaper = settlements.makeBankPaper(aDeal, "단국은행");
+
+        bankPaper = accounts.requestBankPaper(aDeal, settlements);
 
     }
 }
