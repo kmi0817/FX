@@ -8,4 +8,8 @@ public class Counterparty {
         this.positionLimits = positionLimits;
         this.contactInfo = contactInfo;
     }
+
+    public void makeContact() {
+        System.out.println("Counterparty: 연락");
+    }
 }
