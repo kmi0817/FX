@@ -10,7 +10,7 @@ public class Counterparty {
     }
 
     public boolean makeContact(Deal deal) {
-        System.out.println("Counterparty: makeContact");
+//        System.out.println("Counterparty: makeContact");
 
         if (this.positionLimits >= deal.getAmount()) {
             return true;

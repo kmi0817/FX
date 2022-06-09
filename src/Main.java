@@ -8,19 +8,22 @@ public class Main {
 
         Deal aDeal = aDealer.registerDeal(counterparty,350, 1.5, "USD", "2022-08-17", "None"); // 거래 등록
         Certificate aCertificate = settlements.confirmDeal(aDeal); // 승인 불가
-        System.out.println(aDeal.toString());
+        System.out.println(aDeal.toString()); // 거래 출력
+        accounts.checkDeal(aDeal); // 승인 안 된 거래는 검토 불가
 
         settlements.adjustPositionLimits(aDealer, 400); // position limits 조정
         aCertificate = settlements.confirmDeal(aDeal); // 승인 완료
-        System.out.println(aDeal.toString());
-        System.out.println(aCertificate.toString());
+        System.out.println(aDeal.toString()); // 거래 출력
+        System.out.println(aCertificate.toString()); // 거래체결증서 출력
+
+        BankPaper aBankPaper = accounts.makeBankPaper(aDeal, "단국은행"); // 검토 안 된 거래는 은행 서류 생성 실패
 
         accounts.checkDeal(aDeal); // 거래 검토 완료
-        System.out.println(aDeal.toString());
+        System.out.println(aDeal.toString()); // 거래 출력
 
-        BankPaper aBankPaper = accounts.makeBankPaper(aDeal, "단국은행"); // 은행 서류 생성
-        System.out.println(aBankPaper.toString());
+        aBankPaper = accounts.makeBankPaper(aDeal, "단국은행"); // 은행 서류 생성 성공
+        System.out.println(aBankPaper.toString()); // 은행 서류 출력
 
-        accounts.recordCertificate(aCertificate, "2022-06-09", "2022-07-01");
+        accounts.recordCertificate(aCertificate, "2022-06-09", "2022-07-01"); // 은행 거래 기록
     }
 }

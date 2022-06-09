@@ -37,13 +37,13 @@ public class Deal {
 
     /* 거래 승인 */
     public boolean contactCounterparty() {
-        System.out.println("Deal: contactCounterparty");
+//        System.out.println("Deal: contactCounterparty");
 
         return this.counterparty.makeContact(this);
     }
 
     public Certificate makeConfirmation(Settlements settlements) {
-        System.out.println("Deal: makeConfirmation");
+//        System.out.println("Deal: makeConfirmation");
 
         if (this.dealer.getPositionLimits() >= this.amount) {
             this.settlements = settlements; // 승인자 설정
@@ -66,10 +66,9 @@ public class Deal {
     }
 
     public void makeCheck(Accounts accounts) {
-        System.out.println("Deal: makeCheck");
+//        System.out.println("Deal: makeCheck");
 
         this.accounts = accounts; // 검토자 설정
-        System.out.println("거래 검토 완료");
     }
 
     /* 은행 서류 생성 */

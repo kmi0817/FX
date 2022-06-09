@@ -15,7 +15,7 @@ public class Settlements {
 
     /* 거래 승인 */
     public Certificate confirmDeal(Deal deal) {
-        System.out.println("Settlements: confirmDeal");
+//        System.out.println("Settlements: confirmDeal");
 
         if (deal.contactCounterparty()) {
             Certificate certificate = deal.makeConfirmation(this);
@@ -29,7 +29,7 @@ public class Settlements {
 
     /* position limits 조정 */
     public void adjustPositionLimits(Dealer dealer, int positionLimits) {
-        System.out.println("Settlements: adjustPositionLimits");
+//        System.out.println("Settlements: adjustPositionLimits");
 
         dealer.setPositionLimits(positionLimits);
     }

@@ -13,7 +13,7 @@ public class Dealer {
 
     /* 거래 등록 */
     public Deal registerDeal(Counterparty counterparty, int amount, double exchangeRate, String currency, String dueTo, String detail) {
-        System.out.println("Dealer: registerDeal");
+//        System.out.println("Dealer: registerDeal");
 
         Deal deal = new Deal(this, counterparty, amount, exchangeRate, currency, dueTo, detail);
         myDealList.add(deal);
@@ -28,6 +28,6 @@ public class Dealer {
     /* position limits 조정 */
     public void setPositionLimits(int positionLimits) {
         this.positionLimits = positionLimits;
-        System.out.println("Dealer: position limits 조정 완료");
+        System.out.println("Dealer의 position limits 조정 완료");
     }
 }

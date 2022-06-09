@@ -24,6 +24,6 @@ public class Certificate {
     }
 
     public String toString() {
-        return "<Certificate: createdBy " + settlements;
+        return "<Certificate: createdBy " + settlements + ">";
     }
 }
