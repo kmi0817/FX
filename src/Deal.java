@@ -3,10 +3,10 @@ import java.util.Date;
 public class Deal {
     private static int counter = 1; // 거래 id용 클래스 변수
 
-    private Dealer dealer; // 등록자
+    private Dealer dealer; // 등록인
     private Counterparty counterparty; // 거래상대
-    private Settlements settlements; // 승인자
-    private Accounts accounts; // 검토자
+    private Settlements settlements; // 승인인
+    private Accounts accounts; // 검토인
     private Certificate certificate; // 거래체결증서
 
     private int id; // 거래번호
