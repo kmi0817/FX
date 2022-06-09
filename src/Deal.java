@@ -1,5 +1,4 @@
 import java.util.Date;
-import java.util.Set;
 
 public class Deal {
     private static int counter = 1; // 거래 id용 클래스 변수
