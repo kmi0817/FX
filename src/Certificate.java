@@ -18,4 +18,8 @@ public class Certificate {
     public void setBillSettlementDate(String date) {
         this.billSettlementDate = date;
     }
+
+    public String toString() {
+        return "<Certificate: createdBy " + settlements;
+    }
 }

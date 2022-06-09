@@ -77,4 +77,8 @@ public class Deal {
     public Accounts isChecked() {
         return this.accounts;
     }
+
+    public String toString() {
+        return "<Deal" + Integer.toString(this.id) + ": confirmedBy " + this.settlements + ", checkedBy " + this.accounts + ">";
+    }
 }

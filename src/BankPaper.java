@@ -8,4 +8,8 @@ public class BankPaper {
         this.bankName = bankName;
         this.accounts = accounts;
     }
+
+    public String toString() {
+        return "<BankPaper: " + bankName + " 제출용, createdBy " + accounts + ">";
+    }
 }
