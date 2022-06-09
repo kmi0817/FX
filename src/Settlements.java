@@ -2,10 +2,16 @@ import java.sql.Array;
 import java.util.ArrayList;
 
 public class Settlements {
+    private ArrayList<Dealer> dealerList;
     private ArrayList<Certificate> certificateList;
 
     Settlements() {
+        dealerList = new ArrayList<Dealer>();
         certificateList = new ArrayList<Certificate>();
+    }
+
+    public void registerDealer(Dealer dealer) {
+        dealerList.add(dealer);
     }
 
     /* 거래 승인 */

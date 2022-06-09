@@ -5,6 +5,7 @@ public class Main {
         Counterparty counterparty = new Counterparty("James", 500, "1234-5678");
         Dealer aDealer = new Dealer("Park", 300);
         Settlements settlements = new Settlements();
+        settlements.registerDealer(aDealer); // Dealer는 Settlements 부서 소속 사원
         Accounts accounts = new Accounts();
 
         Deal aDeal = aDealer.registerDeal(counterparty,350, 1.5, "USD", "2022-08-17", "None"); // 거래 등록
