@@ -14,8 +14,16 @@ public class Accounts {
     }
 
     /* 은행 서류 생성 */
-    public void makeBankPaper(Deal deal) {
+    public BankPaper makeBankPaper(Deal deal) {
         System.out.println("Accounts: makeBankPaper");
+
+        if (deal.isConfirmed() != null && deal.isChecked() != null) {
+            BankPaper bankPaper = new BankPaper(deal);
+            return bankPaper;
+        } else {
+            System.out.println("은행 서류 생성 불가: 승인이나 검토가 진행되지 않음");
+            return null;
+        }
     }
 
     /* 은행 거래 기록 */

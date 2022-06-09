@@ -14,5 +14,7 @@ public class Main {
         aCertificate = settlements.confirmDeal(aDeal); // 승인 완료
 
         accounts.checkDeal(aDeal); // 거래 검토 완료
+
+        BankPaper aBankPaper = accounts.makeBankPaper(aDeal); // 은행 서류 생성
     }
 }
