@@ -10,6 +10,6 @@ public class Counterparty {
     }
 
     public void makeContact() {
-        System.out.println("Counterparty: 연락");
+        System.out.println("Counterparty: makeContact");
     }
 }

@@ -2,13 +2,18 @@ public class Accounts {
 
     Accounts() {}
 
+    /* 거래 검토 */
     public void checkDeal(Deal deal) {
-        deal.makeCheck(this);
+        System.out.println("Accounts: checkDeal");
     }
 
-    public BankPaper requestBankPaper(Deal deal, Settlements settlements) {
-        BankPaper bankPaper = settlements.makeBankPaper(deal, "단국은행");
+    /* 은행 서류 생성 */
+    public void makeBankPaper(Deal deal) {
+        System.out.println("Accounts: makeBankPaper");
+    }
 
-        return bankPaper;
+    /* 은행 거래 기록 */
+    public void recordCertificate(Deal deal) {
+        System.out.println("Accounts: recordCertificate");
     }
 }
