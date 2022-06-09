@@ -12,18 +12,14 @@ public class Main {
         accounts.checkDeal(aDeal); // 승인 안 된 거래는 검토 불가
 
         settlements.adjustPositionLimits(aDealer, 400); // position limits 조정
-        aCertificate = settlements.confirmDeal(aDeal); // 승인 완료
+        aCertificate = settlements.confirmDeal(aDeal); // 승인 완료 (미완인 거래체결증서)
         System.out.println(aDeal.toString()); // 거래 출력
-        System.out.println(aCertificate.toString()); // 거래체결증서 출력
-
-        BankPaper aBankPaper = accounts.makeBankPaper(aDeal, "단국은행"); // 검토 안 된 거래는 은행 서류 생성 실패
+        System.out.println(aCertificate.toString()); // 미완인 거래체결증서 출력
 
         accounts.checkDeal(aDeal); // 거래 검토 완료
         System.out.println(aDeal.toString()); // 거래 출력
 
-        aBankPaper = accounts.makeBankPaper(aDeal, "단국은행"); // 은행 서류 생성 성공
-        System.out.println(aBankPaper.toString()); // 은행 서류 출력
-
-        accounts.recordCertificate(aCertificate, "2022-06-09", "2022-07-01"); // 은행 거래 기록
+        accounts.recordCertificate(aCertificate, "단국은행", "2022-06-09", "2022-07-01"); // 은행 거래 기록
+        System.out.println(aCertificate.toString()); // 완성된 거래체결증서 출력
     }
 }
