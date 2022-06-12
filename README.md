@@ -6,7 +6,7 @@
 ### Check some documents related to this code [HERE!](https://confused-rate-def.notion.site/0d704355421c448397b281497f8c0a8c)
 
 - You can find...
-- But! Notion page is being modified 😁
+- But! USE CASE is being modified 😁
 
   1. Rich Picture
   2. Use Case Diagram & Use Case
